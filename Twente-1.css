@@ -1,0 +1,61 @@
+/* Achtergrond logo voor de hele pagina */
+body {
+    background-image: url('Images/Fc-Twente.png'); /* Zet hier het pad naar jouw logo-afbeelding */
+    background-size: cover; /* Zorg ervoor dat het logo de gehele achtergrond bedekt */
+    background-position: center; /* Centraal uitgelijnd */
+    background-repeat: no-repeat; /* Zorg ervoor dat het logo niet herhaald wordt */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Een container voor alle afbeeldingen */
+.image-gallery {
+    display: grid; /* Gebruik grid om de afbeeldingen mooi naast elkaar te plaatsen */
+    grid-template-columns: repeat(5, 1fr); /* Zorg ervoor dat er 5 afbeeldingen naast elkaar staan */
+    gap: 20px; /* Ruimte tussen de afbeeldingen */
+    padding: 20px;
+    justify-items: center; /* Zorg ervoor dat de afbeeldingen gecentreerd worden in hun vakken */
+}
+
+/* Voor de individuele afbeeldingen */
+.image-gallery img {
+    width: 100%; /* Zorg ervoor dat de afbeeldingen binnen hun vak passen */
+    height: auto; /* Behoud de verhoudingen van de afbeelding */
+    border-radius: 10px; /* Maak de hoeken van de afbeeldingen afgerond */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe voor een mooi effect */
+    transition: transform 0.3s ease; /* Maak de overgang van de afbeeldingen soepel */
+}
+
+/* Effect wanneer je met de muis over de afbeelding gaat */
+.image-gallery img:hover {
+    transform: scale(1.05); /* Vergroot de afbeelding een beetje bij hover */
+}
+
+/* Als je wil dat de afbeeldingen responsief zijn voor kleinere schermen */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 afbeeldingen naast elkaar op kleinere schermen */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 afbeeldingen naast elkaar op nog kleinere schermen */
+    }
+}
+
+.back-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,115 @@
+/* Schudanimaties */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes shakeHard {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-20px); }
+    50% { transform: translateX(20px); }
+    75% { transform: translateX(-20px); }
+    100% { transform: translateX(0); }
+}
+
+/* Algemene stijlen voor de container */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('Images/HaHahA.png'); /* Hier voeg je de afbeelding toe */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Container voor de blokken */
+.container {
+    position: relative;
+    width: 90vw;  /* Maak de container breder */
+    height: 90vh; /* Maak de container hoger */
+}
+
+/* Specifieke stijlen voor de div's */
+
+/* Big (bovenaan, gecentreerd) */
+.Big {
+    position: absolute;
+    top: 5%; /* Plaatst deze 5% van de hoogte vanaf de bovenkant */
+    left: 50%; /* Plaatst deze in het horizontale midden */
+    transform: translateX(-50%); /* Zorgt ervoor dat het element gecentreerd is */
+    background-color: #add8e6;
+    animation: shake 0.5s infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Biga (links, gecentreerd) */
+.Biga {
+    position: absolute;
+    left: 5%; /* Plaatst deze 5% van de breedte vanaf de linkerkant */
+    top: 50%; /* Plaatst deze verticaal in het midden */
+    transform: translateY(-50%); /* Zorgt ervoor dat het element gecentreerd is */
+    background-color: #ffcccb;
+    animation: shake 0.5s infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Bigb (grote afbeelding, in het midden) */
+.Bigb {
+    position: absolute;
+    top: 50%; /* Plaatst deze verticaal in het midden */
+    left: 50%; /* Plaatst deze in het horizontale midden */
+    transform: translate(-50%, -50%); /* Zorgt ervoor dat het element echt in het midden staat */
+    animation: shakeHard 0.5s infinite;
+    width: 90%; /* Verhoog de breedte van de afbeelding naar 90% van de container */
+    height: 90%; /* Verhoog de hoogte van de afbeelding naar 90% van de container */
+    object-fit: cover; /* Zorgt ervoor dat de afbeelding de ruimte vult zonder de verhouding te verliezen */
+}
+
+/* Bigc (rechts, gecentreerd) */
+.Bigc {
+    position: absolute;
+    right: 5%; /* Plaatst deze 5% van de breedte vanaf de rechterkant */
+    top: 50%; /* Plaatst deze verticaal in het midden */
+    transform: translateY(-50%); /* Zorgt ervoor dat het element gecentreerd is */
+    background-color: #f0e68c;
+    animation: shake 0.5s infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Bigd (onderaan, gecentreerd) */
+.Bigd {
+    position: absolute;
+    bottom: 5%; /* Plaatst deze 5% van de hoogte vanaf de onderkant */
+    left: 50%; /* Plaatst deze in het horizontale midden */
+    transform: translateX(-50%); /* Zorgt ervoor dat het element gecentreerd is */
+    background-color: #dda0dd;
+    animation: shake 0.5s infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+.login-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
